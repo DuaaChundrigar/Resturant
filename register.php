@@ -16,7 +16,7 @@ $sql = "INSERT INTO customers ( name , email , password ) VALUES ('$name' , '$em
 if ($conn -> query($sql) === TRUE) {
 
     echo "Registered successfully";
-    header( 'Location: index.html');
+    header( 'Location: index.php');
 } else {
     echo "Error: " . $sql . "<br>". $conn->error;
 }

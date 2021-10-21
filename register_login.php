@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,6 +124,12 @@
          if(name.length > 0 && email.length > 0 && password.length > 0 && confirm_password.length > 0  ){
             $('#regbtn').attr('disabled' , false);
          }else{
+            if (password.length > 0) {
+                $('#password_error').html("");
+                
+            }else{
+               $('#password_error').html("**password can not be empty");
+            }   
             $('#regbtn').attr('disabled' , true);
          }
 
